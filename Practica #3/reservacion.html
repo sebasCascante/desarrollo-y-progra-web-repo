@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservacion — Restaurante La Lena</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Restaurante La Lena</h1>
+        <p>Cocina de autor costarricense - San Jose, Costa Rica</p>
+        <nav>
+            <ul>
+                <li><a href="practica_3.html#nosotros">Nosotros</a></li>
+                <li><a href="practica_3.html#menu">Menu</a></li>
+                <li><a href="reservacion.html">Reservaciones</a></li>
+                <li><a href="practica_3.html#ubicacion">Ubicacion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Hacer una reservacion</h2>
+            <p>Complete el formulario para reservar su mesa. Confirmamos por telefono o correo en menos de 24 horas.
+                Para grupos mayores a 15 personas llamenos directamente al 2234-5678.</p>
+
+            <form action="#" method="post">
+
+                <fieldset>
+                    <legend>Datos de contacto</legend>
+
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required minlength="2" maxlength="60"
+                        autocomplete="name">
+
+                    <label for="email">Correo electronico</label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+
+                    <label for="telefono">Numero de telefono</label>
+                    <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{8}" maxlength="8">
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Detalles de la reservacion</legend>
+
+                    <label for="fecha">Fecha de la visita</label>
+                    <input type="date" id="fecha" name="fecha" required min="2025-06-01">
+
+                    <label for="hora">Hora de llegada</label>
+                    <input type="time" id="hora" name="hora" required min="12:00" max="22:00">
+
+                    <label for="personas">Cantidad de personas</label>
+                    <input type="number" id="personas" name="personas" required min="1" max="20">
+
+                    <label for="zona">Zona del restaurante</label>
+                    <select id="zona" name="zona" required>
+                        <option value="">-- Seleccione una zona --</option>
+                        <option value="interior">Interior climatizado</option>
+                        <option value="terraza">Terraza al aire libre</option>
+                        <option value="privado">Salon privado</option>
+                    </select>
+
+                    <fieldset>
+                        <legend>Ocasion especial</legend>
+
+                        <label>
+                            <input type="radio" name="ocasion" value="ninguna" checked>
+                            Ninguna en particular
+                        </label>
+
+                        <label>
+                            <input type="radio" name="ocasion" value="cumpleanos">
+                            Cumpleanos
+                        </label>
+
+                        <label>
+                            <input type="radio" name="ocasion" value="aniversario">
+                            Aniversario
+                        </label>
+
+                        <label>
+                            <input type="radio" name="ocasion" value="negocio">
+                            Reunion de negocios
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Restricciones alimentarias</legend>
+
+                        <label>
+                            <input type="checkbox" name="restriccion" value="vegetariano">
+                            Vegetariano
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="restriccion" value="vegano">
+                            Vegano
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="restriccion" value="gluten">
+                            Sin gluten
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="restriccion" value="lactosa">
+                            Sin lactosa
+                        </label>
+                    </fieldset>
+
+                    <label for="mensaje">Indicaciones adicionales</label>
+                    <textarea id="mensaje" name="mensaje" maxlength="400" rows="4">
+          </textarea>
+
+                </fieldset>
+
+                <button type="submit">Confirmar reservacion</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>2025 Restaurante La Lena. Todos los derechos reservados.</p>
+        <nav>
+            <ul>
+                <li><a href="practica_3.html#menu">Ver menu completo</a></li>
+                <li><a href="reservacion.html">Hacer una reservacion</a></li>
+            </ul>
+        </nav>
+        <p>Siguenos en redes: <a href="https://instagram.com/restaurantelena">Instagram</a> - <a
+                href="https://facebook.com/restaurantelena">Facebook</a></p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante La Lena - Cocina costarricense</title>
+</head>
+<body>
+    <!--
+    DECISION SEMANTICA:
+    Use <article> para los platillos del menu porque cada uno tiene sentido
+    por si solo, no use <section> porque section es para agrupar cosas.
+    Tambien use <aside> para los horarios porque no es parte del contenido principal.
+  -->
+
+    <header>
+        <h1>Restaurante La Lena</h1>
+        <p>Cocina de autor costarricense - San Jose, Costa Rica</p>
+        <nav>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#menu">Menu</a>
+            <a href="reservacion.html">Reservaciones</a>
+            <a href="#ubicacion">Ubicacion</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="hero">
+            <h2>Bienvenidos a La Lena</h2>
+            <p>Cada plato es un homenaje a los sabores que crecieron con nosotros. Usamos ingredientes locales de
+                pequeños productores del Valle Central.</p>
+            <img src="restaurante-interior.jpg" alt="interior del restaurante">
+        </section>
+
+        <section id="nosotros">
+            <h3>Nuestra historia</h3>
+            <p>La Lena nacio en 2018 de las manos del chef Rodrigo Solano, quien despues de diez años cocinando en
+                Europa decidio regresar a Costa Rica para elevar la cocina tradicional tica.</p>
+            <p>El nombre proviene de la cocina de leña de la abuela Marta, donde Rodrigo aprendio que la paciencia y los
+                ingredientes honestos son el secreto de cualquier plato memorable.</p>
+            <img src="chef-rodrigo.jpg" alt="foto del chef">
+        </section>
+
+        <section id="menu">
+            <h2>Nuestro Menu</h2>
+
+            <article>
+                <h3>Gallo pinto de autor</h3>
+                <p>Nuestra reinterpretacion del plato mas querido de Costa Rica. Arroz cultivado en Turrialba, frijoles
+                    negros cocidos con epazote fresco y chicharron artesanal de Cartago.</p>
+                <p><strong>Precio:</strong> 4500 colones</p>
+                <img src="gallo-pinto.jpg" alt="gallo pinto">
+            </article>
+
+            <article>
+                <h3>Ceviche de corvina al coco</h3>
+                <p>Corvina fresca del Pacifico macerada en limon mandarino, leche de coco artesanal y chile panameno.
+                    Servido con patacones.</p>
+                <p><strong>Precio:</strong> 6200 colones</p>
+                <img src="ceviche-coco.jpg" alt="ceviche">
+            </article>
+
+            <article>
+                <h3>Picadillo de arracache con cerdo</h3>
+                <p>Arracache de las faldas del Volcan Irazu salteado con lomo de cerdo criollo y hierbas del huerto.
+                    Acompañado de arroz blanco y tortillas de maiz hechas a mano.</p>
+                <p><strong>Precio:</strong> 7800 colones</p>
+                <img src="picadillo-arracache.jpg" alt="picadillo">
+            </article>
+
+        </section>
+
+        <div id="reservaciones">
+            <h2>Reservaciones</h2>
+            <p>Aceptamos reservaciones para grupos de 2 a 20 personas. Recomendamos reservar con al menos 48 horas de
+                anticipacion.</p>
+            <p>Llamenos al <a href="tel:+50622345678">2234-5678</a> o escribanos a reservas@lalena.cr</p>
+        </div>
+
+        <aside>
+            <h2>Horarios</h2>
+            <p><strong>Lunes a jueves:</strong> 12:00 md - 10:00 pm</p>
+            <p><strong>Viernes y sabado:</strong> 12:00 md - 11:30 pm</p>
+            <p><strong>Domingo:</strong> 12:00 md - 9:00 pm</p>
+            <p>Contamos con parqueo privado y acceso para sillas de ruedas.</p>
+            <p>Aceptamos tarjetas Visa, Mastercard y SINPE Movil.</p>
+        </aside>
+
+        <section id="ubicacion">
+            <h2>Como llegarnos</h2>
+            <p>Nos encontramos en San Pedro de Montes de Oca, 200 metros al norte del Mall San Pedro. San Jose, Costa
+                Rica.</p>
+            <img src="mapa-restaurante.jpg" alt="mapa">
+        </section>
+
+    </main>
+
+    <footer>
+        <p>2025 Restaurante La Lena. Todos los derechos reservados.</p>
+        <p>Siguenos en redes: <a href="https://instagram.com/restaurantelena">Instagram</a> - <a
+                href="https://facebook.com/restaurantelena">Facebook</a></p>
+    </footer>
+</body>
+</html>
