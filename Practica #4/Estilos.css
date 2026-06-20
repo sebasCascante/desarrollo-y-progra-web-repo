@@ -1,0 +1,176 @@
+/* reset basico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* - selectores de etiqueta - */
+
+body {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  color: #1f1e1e;
+  background-color: #e7e7e3;
+  line-height: 1.7;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+}
+
+h2 {
+  font-size: 1.3rem;
+  font-weight: normal;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #d1cbcb;
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 0.9rem;
+  color: #3b3939;
+}
+
+a {
+  color: #161616;
+  text-decoration: none;
+  border-bottom: 1px solid #999;
+}
+
+a:hover {
+  color: #575555;
+  border-bottom-color: #575454;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin-top: 1rem;
+}
+
+/* - selectores de id - */
+
+#hero {
+  background-color: #131212;
+  color: #ebebe8;
+  padding: 3rem 2rem;
+}
+
+#hero h2 {
+  color: #f3f3ef;
+  border-bottom-color: #525050;
+}
+
+#hero p {
+  color: #c0bdbd;
+}
+
+#menu {
+  padding: 2.5rem 2rem;
+}
+
+#nosotros {
+  padding: 2.5rem 2rem;
+  background-color: #f0efeb;
+}
+
+#reservaciones {
+  padding: 2.5rem 2rem;
+}
+
+#ubicacion {
+  padding: 2.5rem 2rem;
+  background-color: #f0efeb;
+}
+
+/* - selectores de clase - */
+
+/* no tengo clases en el HTML original */
+
+/* - selectores descendentes - */
+
+nav a {
+  display: inline-block;
+  margin-right: 1.5rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-bottom: none;
+}
+
+nav a:hover {
+  color: #8f8c8c;
+  border-bottom: none;
+}
+
+#menu article {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e6e2e2;
+}
+
+#menu article:last-child {
+  border-bottom: none;
+}
+
+footer a {
+  color: #504d4d;
+}
+
+footer a:hover {
+  color: #1a1919;
+}
+
+/* - header y footer - */
+
+header {
+  padding: 2rem;
+  border-bottom: 1px solid #e4e0e0;
+}
+
+header p {
+  font-size: 0.85rem;
+  color: #8b8989;
+  margin-top: 0.3rem;
+  margin-bottom: 1.2rem;
+}
+
+footer {
+  padding: 2rem;
+  border-top: 1px solid #e4dfdf;
+  font-size: 0.85rem;
+  color: #8b8989;
+}
+
+footer p {
+  color: #8b8989;
+  margin-bottom: 0.4rem;
+}
+
+/* - aside - */
+
+aside {
+  padding: 2.5rem 2rem;
+  background-color: #181717;
+  color: #e9e9e8;
+}
+
+aside h2 {
+  color: #e6e6e4;
+  border-bottom-color: #363535;
+}
+
+aside p {
+  color: #bbb8b8;
+}
