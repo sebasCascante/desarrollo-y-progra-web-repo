@@ -1,0 +1,198 @@
+/* reset basico */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* - base - */
+
+body{
+  font-family: Georgia, serif;
+  font-size: 16px;
+  color: #1f1e1e;
+  background-color: #e7e7e3;
+  line-height: 1.7;
+}
+
+h1{
+  font-size: 32px;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+}
+
+h2{
+  font-size: 21px;
+  font-weight: normal;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 19px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #d1cbcb;
+}
+
+p{
+  margin-bottom: 14px;
+  color: #3b3939;
+}
+
+a{
+  color: #161616;
+  text-decoration: none;
+  border-bottom: 1px solid #999;
+}
+
+a:hover{
+  color: #575555;
+  border-bottom-color: #575454;
+}
+
+/* - header - */
+
+header{
+  padding: 32px;
+  border-bottom: 1px solid #e4e0e0;
+}
+
+header p{
+  font-size: 14px;
+  color: #8b8989;
+  margin-top: 5px;
+  margin-bottom: 19px;
+}
+
+nav a{
+  display: inline-block;
+  margin-right: 24px;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-bottom: none;
+}
+
+nav a:hover{
+  color: #8f8c8c;
+  border-bottom: none;
+}
+
+nav ul{
+  list-style: none;
+}
+
+nav ul li{
+  display: inline-block;
+}
+
+/* - main - */
+
+main{
+  padding: 48px 32px;
+  max-width: 700px;
+}
+
+main section{
+  margin-bottom: 40px;
+}
+
+/* - formulario - */
+
+form{
+  margin-top: 24px;
+}
+
+fieldset{
+  border: 1px solid #c8c5c5;
+  border-radius: 4px;
+  padding: 24px;
+  margin-bottom: 24px;
+  background-color: #f0efeb;
+}
+
+legend{
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5a5858;
+  padding: 0 8px;
+}
+
+label{
+  display: block;
+  font-size: 14px;
+  color: #3b3939;
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+select,
+textarea{
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #c8c5c5;
+  border-radius: 4px;
+  font-family: Georgia, serif;
+  font-size: 15px;
+  color: #1f1e1e;
+  background-color: #f9f9f7;
+}
+
+/* radio y checkbox no llevan width 100% */
+input[type="radio"],
+input[type="checkbox"]{
+  margin-right: 8px;
+}
+
+textarea{
+  resize: vertical;
+}
+
+button[type="submit"]{
+  display: block;
+  margin-top: 24px;
+  padding: 12px 32px;
+  background-color: #1a1a1a;
+  color: #f9f9f7;
+  border: none;
+  border-radius: 4px;
+  font-family: Georgia, serif;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover{
+  background-color: #3d3c3c;
+}
+
+/* - footer - */
+
+footer{
+  padding: 32px;
+  border-top: 1px solid #e4dfdf;
+  font-size: 14px;
+  color: #8b8989;
+}
+
+footer p{
+  color: #8b8989;
+  margin-bottom: 6px;
+}
+
+footer a{
+  color: #504d4d;
+  border-bottom: none;
+}
+
+footer a:hover{
+  color: #1a1919;
+}
+
+footer nav ul{
+  margin-bottom: 12px;
+}
