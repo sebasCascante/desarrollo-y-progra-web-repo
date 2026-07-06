@@ -34,12 +34,11 @@ containerWay1.appendChild(listWay1);
 const containerWay2 = document.querySelector("#students-list-2");
 console.log(containerWay2);
 
-//const htmlInjectionWay2 = `
-//    <ol>
-//        ${students.map((student) =>
-            //`<li>${student}</li>`).join("");
-//        },
-//    </ol>
-//`;
-
-//containerWay2.innerHTML = htmlInjectionWay2;
+const htmlInjectionWay2 = `
+    <ol>
+        ${students.map((student) => 
+            `<li>${student}</li>`).join("")
+        },
+    </ol>
+`;
+containerWay2.innerHTML = htmlInjectionWay2;
