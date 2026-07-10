@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica 7 — Tarjeta de presentación interactiva</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="wrap">
+    <p class="eyebrow">SOFT-06C2 · Semana 07 · práctica.js</p>
+
+    <section class="card" id="card">
+      <div class="card__top">
+        <div class="avatar" id="avatar">AR</div>
+        <span class="status" id="status">
+          <span class="status__dot" id="statusDot"></span>
+          <span id="statusText">disponible</span>
+        </span>
+      </div>
+
+      <h1 class="name" id="name">Ana Rodríguez</h1>
+      <p class="role" id="role">Desarrolladora Web Jr.</p>
+
+      <p class="desc" id="desc">
+        Estudiante de Diseño y Programación Web. Le gusta ordenar el CSS
+        más que ordenar su cuarto y todavía no le teme al DOM.
+      </p>
+
+      <dl class="facts">
+        <div class="facts__item">
+          <dt>Ciudad</dt>
+          <dd id="city">San José, Costa Rica</dd>
+        </div>
+        <div class="facts__item">
+          <dt>Visitas a la tarjeta</dt>
+          <dd id="visits">0</dd>
+        </div>
+      </dl>
+
+      <p class="log" id="log">Presioná un botón para ver qué pasa ↓</p>
+    </section>
+
+    <div class="controls">
+      <button id="btnVisit" class="btn btn--primary" type="button">
+        + Sumar visita
+      </button>
+      <button id="btnAvailability" class="btn btn--ghost" type="button">
+        Cambiar disponibilidad
+      </button>
+      <button id="btnTheme" class="btn btn--ghost" type="button">
+        Cambiar tema
+      </button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
