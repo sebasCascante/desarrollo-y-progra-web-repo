@@ -1,69 +1,43 @@
-// ======================================================
-// Práctica 7 — Variables, tipos y DOM básico
-// script.js
-// ======================================================
+//Práctica 7 - Variables, tipos y DOM básico
+//script.js
 
-// --- 1. Variables con tipos diferentes (const / let) ---
-const nombre = "Ana Rodríguez";        // string
-let visitas = 0;                       // number
-let disponible = true;                 // boolean
+//Variables con tipos diferentes
+const nombre = "Sebastian Cascante"; //string
+let visitas = 0; //numero
+let disponible = true; //boolean
 
-// --- 2. Selección de elementos del DOM con querySelector ---
-const visitsEl = document.querySelector("#visits");
-const statusTextEl = document.querySelector("#statusText");
-const statusDotEl = document.querySelector("#statusDot");
-const logEl = document.querySelector("#log");
-const cardEl = document.querySelector("#card");
+//Selección de elementos con querySelector
+const visitasEl = document.querySelector("#visitas");
+const estadoEl = document.querySelector("#estado");
+const mensajeEl = document.querySelector("#mensaje");
 
-// --- 3. Referencias a los botones ---
-const btnVisit = document.querySelector("#btnVisit");
-const btnAvailability = document.querySelector("#btnAvailability");
-const btnTheme = document.querySelector("#btnTheme");
+//Botones
+const btnVisita = document.querySelector("#btnVisita");
+const btnEstado = document.querySelector("#btnEstado");
 
-console.log(`Tarjeta cargada para ${nombre}. Disponibilidad inicial: ${disponible}`);
+console.log(`Tarjeta cargada para ${nombre}`);
 
-// ------------------------------------------------------
-// Evento 1: sumar una visita a la tarjeta
-// ------------------------------------------------------
-btnVisit.addEventListener("click", () => {
+//Evento: sumar visita
+btnVisita.addEventListener("click", () => {
   visitas = visitas + 1;
 
-  // Template literal combinando variables de distinto tipo
-  const mensaje = `${nombre} recibió ${visitas} visita(s) en esta tarjeta.`;
+  //Template combinando variables
+  const texto = `${nombre} recibió ${visitas} visita(s).`;
 
-  // Modificación de textContent
-  visitsEl.textContent = visitas;
-  logEl.textContent = mensaje;
+  visitasEl.textContent = visitas;
+  mensajeEl.textContent = texto;
 
-  console.log(`[visitas] contador actualizado a ${visitas}`);
+  console.log(`Visitas actualizadas: ${visitas}`);
 });
 
-// ------------------------------------------------------
-// Evento 2: alternar disponibilidad (boolean)
-// ------------------------------------------------------
-btnAvailability.addEventListener("click", () => {
+//Evento: cambiar disponibilidad
+btnEstado.addEventListener("click", () => {
   disponible = !disponible;
 
-  const textoEstado = disponible ? "disponible" : "ocupada";
-  statusTextEl.textContent = textoEstado;
+  estadoEl.textContent = disponible ? "disponible" : "ocupado";
+  estadoEl.classList.toggle("ocupado", !disponible);
 
-  // Modificación de classList según el valor booleano
-  statusDotEl.classList.toggle("status__dot--off", !disponible);
+  mensajeEl.textContent = `Estado cambiado a: ${estadoEl.textContent}`;
 
-  logEl.textContent = `Estado cambiado: ahora ${nombre} está ${textoEstado}.`;
-
-  console.log(`[disponibilidad] valor booleano actual: ${disponible}`);
-});
-
-// ------------------------------------------------------
-// Evento 3 (extra): cambiar el tema visual de la tarjeta
-// ------------------------------------------------------
-btnTheme.addEventListener("click", () => {
-  cardEl.classList.toggle("card--light");
-
-  const temaActual = cardEl.classList.contains("card--light") ? "claro" : "oscuro";
-  logEl.textContent = `Tema visual cambiado a modo ${temaActual}.`;
-
-  // Modificación directa de style además de classList
-  cardEl.style.transition = "background 0.35s ease, border-color 0.35s ease";
+  console.log(`Disponibilidad actual: ${disponible}`);
 });
