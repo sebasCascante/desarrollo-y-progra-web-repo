@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Práctica 8 - Calculadora de IMC</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div class="contenedor">
+  <h1>Calculadora de IMC</h1>
+  <p class="subtitulo">Ingresá tu peso y tu altura para calcular tu Índice de Masa Corporal</p>
+
+  <label for="peso">Peso (kg)</label>
+  <input type="number" id="peso" placeholder="Ej: 68" step="0.1">
+
+  <label for="altura">Altura (m)</label>
+  <input type="number" id="altura" placeholder="Ej: 1.70" step="0.01">
+
+  <div class="botones">
+    <button id="btnCalcular">Calcular IMC</button>
+    <button id="btnLimpiar">Limpiar historial</button>
+  </div>
+
+  <div id="resultado"></div>
+
+  <div id="historial">
+    <h2>Historial de cálculos</h2>
+    <ul id="listaHistorial"></ul>
+  </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
