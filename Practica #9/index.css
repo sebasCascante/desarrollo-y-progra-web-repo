@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+#form-agregar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+#form-agregar input,
+#form-agregar select {
+  padding: 6px;
+}
+
+#contador {
+  font-weight: bold;
+}
+
+#lista-productos {
+  list-style: none;
+  padding: 0;
+}
+
+.producto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #dddcdc;
+}
+
+.btn-eliminar {
+  cursor: pointer;
+}

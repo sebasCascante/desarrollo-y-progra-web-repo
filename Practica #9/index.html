@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 9 - Catalogo de Productos</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <h1>Catalogo de Productos</h1>
+
+    <form id="form-agregar">
+        <input type="text" id="input-nombre" placeholder="Nombre" required>
+        <input type="number" id="input-precio" placeholder="Precio" min="0" required>
+        <select id="input-categoria" required>
+            <option value="" disabled selected>Categoria</option>
+            <option value="Electronica">Electronica</option>
+            <option value="Hogar">Hogar</option>
+            <option value="Ropa">Ropa</option>
+            <option value="Alimentos">Alimentos</option>
+            <option value="Juguetes">Juguetes</option>
+        </select>
+        <button type="submit">Agregar</button>
+    </form>
+
+    <label for="filtro-categoria">Filtrar por categoria:</label>
+    <select id="filtro-categoria">
+        <option value="todas">Todas</option>
+        <option value="Electronica">Electronica</option>
+        <option value="Hogar">Hogar</option>
+        <option value="Ropa">Ropa</option>
+        <option value="Alimentos">Alimentos</option>
+        <option value="Juguetes">Juguetes</option>
+    </select>
+
+    <p id="contador">0 productos</p>
+
+    <ul id="lista-productos"></ul>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
