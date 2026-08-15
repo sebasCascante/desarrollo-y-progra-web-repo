@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todos los productos - Darling</title>
+  <meta name="description" content="Explora el catalogo completo de joyeria Darling.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <header class="encabezado">
+    <a href="index.html" class="marca">Darling.</a>
+    <nav class="nav-principal" aria-label="Navegacion principal">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" aria-current="page">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="nav-cuenta" aria-label="Cuenta y carrito">
+      <ul>
+        <li><a href="admin.html" aria-label="Panel de administracion">Admin</a></li>
+        <li>
+          <a href="cart.html" aria-label="Ver carrito">
+            Carrito<span class="contador-carrito" id="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <section class="hero-angosto">
+      <h1>Our Products</h1>
+      <form class="barra-busqueda" id="form-busqueda" role="search">
+        <input type="search" id="input-busqueda" placeholder="Find jewelry you like" aria-label="Buscar joyas">
+      </form>
+    </section>
+
+    <section aria-label="Catalogo">
+      <div class="barra-filtros">
+        <nav class="filtros" id="filter-bar" aria-label="Filtrar por tipo de pieza"></nav>
+        <p class="orden">
+          <label for="orden-precio">Sort by price</label>
+          <select id="orden-precio">
+            <option value="ninguno">Por defecto</option>
+            <option value="asc">Menor a mayor</option>
+            <option value="desc">Mayor a menor</option>
+          </select>
+        </p>
+      </div>
+
+      <ul class="grid-productos" id="product-grid"></ul>
+      <p class="admin-vacio oculto" id="no-results">No encontramos productos con ese criterio.</p>
+
+      <nav class="paginacion" id="paginacion" aria-label="Paginacion de resultados"></nav>
+    </section>
+
+    <section aria-label="Beneficios">
+      <ul class="franja-beneficios">
+        <li>
+          <p class="icono-beneficio" aria-hidden="true">&#128666;</p>
+          <h3>Delivery</h3>
+          <p>Envio asegurado a todo el pais.</p>
+        </li>
+        <li>
+          <p class="icono-beneficio" aria-hidden="true">&#9825;</p>
+          <h3>Customer care</h3>
+          <p>Te acompanamos siempre.</p>
+        </li>
+        <li>
+          <p class="icono-beneficio" aria-hidden="true">&#128274;</p>
+          <h3>Payment security</h3>
+          <p>Pagos protegidos.</p>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <a href="index.html" class="marca">Darling.</a>
+
+    <nav aria-label="Enlaces de tienda">
+      <h3>Shop</h3>
+      <ul>
+        <li><a href="products.html">Todos los productos</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+
+    <nav aria-label="Enlaces de ayuda">
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="cart.html">Carrito</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+
+    <form class="form-newsletter" onsubmit="return false;" aria-label="Suscripcion al boletin">
+      <h3>Subscribe to our newsletter</h3>
+      <input type="email" placeholder="Input your email" aria-label="Correo para el boletin">
+      <button type="submit">Subscribe</button>
+    </form>
+
+    <p class="pie-inferior">
+      <span>&copy; 2026 Darling Jewelry</span>
+      <span>Entrega FInal del Proyecto</span>
+    </p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/product-card.js"></script>
+  <script src="js/testimonial.js"></script>
+  <script src="js/render-products.js"></script>
+</body>
+
+</html>

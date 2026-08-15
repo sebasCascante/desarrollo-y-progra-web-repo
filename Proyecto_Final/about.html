@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Darling</title>
+  <meta name="description" content="La historia detras de Darling Jewelry.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <header class="encabezado">
+    <a href="index.html" class="marca">Darling.</a>
+    <nav class="nav-principal" aria-label="Navegacion principal">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="nav-cuenta" aria-label="Cuenta y carrito">
+      <ul>
+        <li><a href="admin.html" aria-label="Panel de administracion">Admin</a></li>
+        <li>
+          <a href="cart.html" aria-label="Ver carrito">
+            Carrito<span class="contador-carrito" id="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <section class="hero-angosto">
+      <h1>About us</h1>
+      <p>Joyeria para llevar puesta la historia.</p>
+    </section>
+
+    <section aria-labelledby="titulo-historia">
+      <h2 id="titulo-historia">Our story</h2>
+      <p class="muted" style="max-width:70ch;">Darling empezo en un taller pequeno con una idea simple: hacer piezas que
+        se hereden en vez de reemplazarse cada temporada. Trabajamos en lotes pequenos, priorizando el acabado sobre el
+        volumen.</p>
+      <figure class="figura-video">
+        <img src="https://images.unsplash.com/photo-1772442125267-7640b4b5f2fe?auto=format&fit=crop&w=1200&h=600&q=80" alt="Detras de camaras del taller de Darling">
+        <button type="button" class="boton-play" aria-label="Reproducir video">&#9654;</button>
+      </figure>
+      <ul class="fila-datos">
+        <li><span class="dato-num">2019</span><span class="dato-label">Fundada</span></li>
+        <li><span class="dato-num">3</span><span class="dato-label">Colecciones activas</span></li>
+        <li><span class="dato-num">100%</span><span class="dato-label">Tallado a mano</span></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="titulo-equipo">
+      <h2 id="titulo-equipo" class="centrado">Designer at Darling.</h2>
+      <ul class="grid-equipo" id="grid-equipo"></ul>
+    </section>
+
+    <section aria-labelledby="titulo-instagram" class="centrado">
+      <h2 id="titulo-instagram">Instagram</h2>
+      <p class="muted">@sebas_cascante89</p>
+      <ul class="grid-instagram">
+        <li><img src="https://images.unsplash.com/photo-1622398925373-3f91b1e275f5?auto=format&fit=crop&w=500&h=500&q=80" alt="Anillo de oro"></li>
+        <li><img src="https://images.unsplash.com/photo-1611107683227-e9060eccd846?auto=format&fit=crop&w=500&h=500&q=80" alt="Collar de cadena de oro"></li>
+        <li><img src="https://images.unsplash.com/photo-1680968921717-4abbbe793bb3?auto=format&fit=crop&w=500&h=500&q=80" alt="Aretes de aro"></li>
+        <li><img src="https://images.unsplash.com/photo-1602527428055-a2526fabdc9f?auto=format&fit=crop&w=500&h=500&q=80" alt="Pulsera de cuentas"></li>
+        <li><img src="https://images.unsplash.com/photo-1620656798579-1984d9e87df7?auto=format&fit=crop&w=500&h=500&q=80" alt="Mujer con collar"></li>
+        <li><img src="https://images.unsplash.com/photo-1654699991520-aaaf4dd2608b?auto=format&fit=crop&w=500&h=500&q=80" alt="Collar de perlas"></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <a href="index.html" class="marca">Darling.</a>
+
+    <nav aria-label="Enlaces de tienda">
+      <h3>Shop</h3>
+      <ul>
+        <li><a href="products.html">Todos los productos</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+
+    <nav aria-label="Enlaces de ayuda">
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="cart.html">Carrito</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+
+    <form class="form-newsletter" onsubmit="return false;" aria-label="Suscripcion al boletin">
+      <h3>Subscribe to our newsletter</h3>
+      <input type="email" placeholder="Input your email" aria-label="Correo para el boletin">
+      <button type="submit">Subscribe</button>
+    </form>
+
+    <p class="pie-inferior">
+      <span>&copy; 2026 Darling Jewelry</span>
+      <span>Entrega FInal del Proyecto</span>
+    </p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/product-card.js"></script>
+  <script src="js/testimonial.js"></script>
+  <script src="js/render-about.js"></script>
+</body>
+
+</html>

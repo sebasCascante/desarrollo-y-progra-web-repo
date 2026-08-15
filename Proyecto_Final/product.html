@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle del producto - Darling</title>
+  <meta name="description" content="Detalle de una pieza de joyeria Darling.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <header class="encabezado">
+    <a href="index.html" class="marca">Darling.</a>
+    <nav class="nav-principal" aria-label="Navegacion principal">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" aria-current="page">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="nav-cuenta" aria-label="Cuenta y carrito">
+      <ul>
+        <li><a href="admin.html" aria-label="Panel de administracion">Admin</a></li>
+        <li>
+          <a href="cart.html" aria-label="Ver carrito">
+            Carrito<span class="contador-carrito" id="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <nav class="migas" aria-label="Ruta de navegacion" id="migas-producto-nav">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li aria-current="page" id="miga-producto">-</li>
+      </ol>
+    </nav>
+
+    <section aria-label="Detalle del producto" id="product-detail">
+      <div class="detalle-producto">
+        <figure class="detalle-imagen">
+          <img src="IMG.jpg" alt="" id="detail-img">
+        </figure>
+        <div class="detalle-copia">
+          <span class="tarjeta-coleccion" id="detail-collection"></span>
+          <h1 id="detail-name">-</h1>
+          <p class="detalle-precio" id="detail-price"></p>
+          <p id="detail-desc"></p>
+          <p class="detalle-stock" id="detail-stock"></p>
+
+          <div class="fila-cantidad" id="qty-row">
+            <div class="control-cantidad">
+              <button type="button" id="qty-minus" aria-label="Restar">-</button>
+              <input type="number" id="qty-input" value="1" min="1" max="10" aria-label="Cantidad">
+              <button type="button" id="qty-plus" aria-label="Sumar">+</button>
+            </div>
+            <button type="button" class="boton boton-dorado" id="add-to-cart-btn">Add to bag</button>
+          </div>
+          <p class="mensaje-detalle" id="detail-msg"></p>
+
+          <details>
+            <summary>Delivery</summary>
+            <p>Envios a todo el pais en 3 a 5 dias habiles.</p>
+          </details>
+          <details>
+            <summary>Payment</summary>
+            <p>Aceptamos tarjeta de credito y debito.</p>
+          </details>
+          <details>
+            <summary>Warranty</summary>
+            <p>6 meses de garantia contra defectos de fabricacion.</p>
+          </details>
+          <details>
+            <summary>Care</summary>
+            <p>Evita el contacto con perfumes y agua para conservar el brillo.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+    <p class="admin-vacio oculto" id="product-not-found">No encontramos ese producto. <a href="products.html">Volve al
+        catalogo</a>.</p>
+
+    <section class="seccion-relacionados" aria-labelledby="titulo-relacionados" id="related-section">
+      <h2 id="titulo-relacionados">You may also like</h2>
+      <ul class="grid-productos" id="related-products"></ul>
+    </section>
+
+    <section id="testimonio-producto" aria-label="Testimonio de clientes"></section>
+
+  </main>
+
+  <footer class="pie">
+    <a href="index.html" class="marca">Darling.</a>
+
+    <nav aria-label="Enlaces de tienda">
+      <h3>Shop</h3>
+      <ul>
+        <li><a href="products.html">Todos los productos</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+
+    <nav aria-label="Enlaces de ayuda">
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="cart.html">Carrito</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+
+    <form class="form-newsletter" onsubmit="return false;" aria-label="Suscripcion al boletin">
+      <h3>Subscribe to our newsletter</h3>
+      <input type="email" placeholder="Input your email" aria-label="Correo para el boletin">
+      <button type="submit">Subscribe</button>
+    </form>
+
+    <p class="pie-inferior">
+      <span>&copy; 2026 Darling Jewelry</span>
+      <span>Entrega FInal del Proyecto</span>
+    </p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/product-card.js"></script>
+  <script src="js/testimonial.js"></script>
+  <script src="js/render-product.js"></script>
+</body>
+
+</html>

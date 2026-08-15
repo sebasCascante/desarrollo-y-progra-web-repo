@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - Darling</title>
+  <meta name="description" content="Revisa tu carrito antes de pagar.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <header class="encabezado">
+    <a href="index.html" class="marca">Darling.</a>
+    <nav class="nav-principal" aria-label="Navegacion principal">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="nav-cuenta" aria-label="Cuenta y carrito">
+      <ul>
+        <li><a href="admin.html" aria-label="Panel de administracion">Admin</a></li>
+        <li>
+          <a href="cart.html" aria-label="Ver carrito">
+            Carrito<span class="contador-carrito" id="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <section aria-labelledby="titulo-carrito">
+      <h1 id="titulo-carrito">Order summary</h1>
+
+      <p id="cart-empty" class="carrito-vacio oculto">
+        Todavia no agregaste ninguna pieza.<br>
+        <a href="products.html" class="boton boton-contorno-oscuro" style="margin-top:14px;display:inline-block;">Ver
+          productos</a>
+      </p>
+
+      <div id="cart-layout" style="display:grid;grid-template-columns:1.6fr 1fr;gap:40px;align-items:start;">
+        <table class="tabla-carrito">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Subtotal</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="cart-items"></tbody>
+        </table>
+
+        <aside class="resumen-carrito" aria-label="Resumen de compra">
+          <h2 style="font-size:18px;">Payment method</h2>
+
+          <form id="voucher-form">
+            <div class="fila-voucher">
+              <input type="text" id="voucher-input" placeholder="$15 OFF" aria-label="Codigo de descuento">
+              <button type="submit" class="boton boton-dorado" style="padding:10px 18px;">Apply</button>
+            </div>
+          </form>
+          <p class="voucher-mensaje" id="voucher-msg"></p>
+
+          <p class="fila-resumen"><span>Subtotal</span><span id="cart-subtotal">$0.00</span></p>
+          <p class="fila-resumen"><span>Descuento</span><span id="cart-descuento">-$0.00</span></p>
+          <p class="fila-resumen total"><span>Total</span><span id="cart-total">$0.00</span></p>
+          <button type="button" class="boton boton-bloque" style="margin-top:18px;" id="checkout-btn">Proceed to
+            payment</button>
+        </aside>
+      </div>
+    </section>
+
+    <section class="seccion-relacionados" aria-labelledby="titulo-relacionados-carrito" id="related-cart-section">
+      <h2 id="titulo-relacionados-carrito">You may also like</h2>
+      <ul class="grid-productos" id="related-cart-products"></ul>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <a href="index.html" class="marca">Darling.</a>
+
+    <nav aria-label="Enlaces de tienda">
+      <h3>Shop</h3>
+      <ul>
+        <li><a href="products.html">Todos los productos</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+
+    <nav aria-label="Enlaces de ayuda">
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="cart.html">Carrito</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+
+    <form class="form-newsletter" onsubmit="return false;" aria-label="Suscripcion al boletin">
+      <h3>Subscribe to our newsletter</h3>
+      <input type="email" placeholder="Input your email" aria-label="Correo para el boletin">
+      <button type="submit">Subscribe</button>
+    </form>
+
+    <p class="pie-inferior">
+      <span>&copy; 2026 Darling Jewelry</span>
+      <span>Entrega FInal del Proyecto</span>
+    </p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/product-card.js"></script>
+  <script src="js/testimonial.js"></script>
+  <script src="js/render-cart.js"></script>
+</body>
+
+</html>

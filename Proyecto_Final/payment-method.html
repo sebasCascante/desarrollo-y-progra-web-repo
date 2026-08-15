@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment method - Darling</title>
+  <meta name="description" content="Pago simulado para completar tu compra en Darling.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <header class="encabezado">
+    <a href="index.html" class="marca">Darling.</a>
+    <nav class="nav-principal" aria-label="Navegacion principal">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="nav-cuenta" aria-label="Cuenta y carrito">
+      <ul>
+        <li><a href="admin.html" aria-label="Panel de administracion">Admin</a></li>
+        <li>
+          <a href="cart.html" aria-label="Ver carrito">
+            Carrito<span class="contador-carrito" id="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <section aria-labelledby="titulo-pago" style="max-width:520px;margin:0 auto;">
+      <h1 id="titulo-pago">Payment method</h1>
+
+      <p class="resumen-pago">
+        <span>Total a pagar</span>
+        <strong id="payment-total">$0.00</strong>
+      </p>
+
+      <p id="payment-empty-msg" class="oculto muted">Tu carrito esta vacio. <a href="products.html">Volve a la
+          tienda</a> antes de pagar.</p>
+
+      <form id="payment-form" class="tarjeta-formulario">
+        <p class="campo">
+          <label for="card-name">Nombre en la tarjeta</label>
+          <input type="text" id="card-name" placeholder="Como aparece en la tarjeta">
+        </p>
+        <p class="campo">
+          <label for="card-number">Numero de tarjeta</label>
+          <input type="text" id="card-number" placeholder="0000 0000 0000 0000" maxlength="19">
+        </p>
+        <div class="fila-doble">
+          <p class="campo">
+            <label for="card-expiry">Vencimiento (MM/AA)</label>
+            <input type="text" id="card-expiry" placeholder="MM/AA" maxlength="5">
+          </p>
+          <p class="campo">
+            <label for="card-cvv">CVV</label>
+            <input type="text" id="card-cvv" placeholder="123" maxlength="4">
+          </p>
+        </div>
+        <button type="submit" class="boton boton-bloque" id="pay-submit-btn">Confirmar pago simulado</button>
+        <p class="muted" style="margin-top:12px;font-size:13px;">Pago simulado con fines academicos, no se procesa
+          ningun cobro real.</p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <a href="index.html" class="marca">Darling.</a>
+
+    <nav aria-label="Enlaces de tienda">
+      <h3>Shop</h3>
+      <ul>
+        <li><a href="products.html">Todos los productos</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+
+    <nav aria-label="Enlaces de ayuda">
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="cart.html">Carrito</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+
+    <form class="form-newsletter" onsubmit="return false;" aria-label="Suscripcion al boletin">
+      <h3>Subscribe to our newsletter</h3>
+      <input type="email" placeholder="Input your email" aria-label="Correo para el boletin">
+      <button type="submit">Subscribe</button>
+    </form>
+
+    <p class="pie-inferior">
+      <span>&copy; 2026 Darling Jewelry</span>
+      <span>Entrega FInal del Proyecto</span>
+    </p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/product-card.js"></script>
+  <script src="js/testimonial.js"></script>
+  <script src="js/render-payment-method.js"></script>
+</body>
+
+</html>

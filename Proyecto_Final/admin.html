@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administracion - Darling</title>
+  <meta name="description" content="Panel interno para agregar productos al catalogo de Darling.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <header class="encabezado">
+    <a href="index.html" class="marca">Darling.</a>
+    <nav class="nav-principal" aria-label="Navegacion principal">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="nav-cuenta" aria-label="Cuenta y carrito">
+      <ul>
+        <li><a href="admin.html" aria-label="Panel de administracion">Admin</a></li>
+        <li>
+          <a href="cart.html" aria-label="Ver carrito">
+            Carrito<span class="contador-carrito" id="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <section aria-labelledby="titulo-admin">
+      <h1 id="titulo-admin">Administracion de catalogo</h1>
+      <p class="muted" style="margin-bottom:24px;max-width:60ch;">Los productos que agregues aca se guardan en el
+        navegador (localStorage) y se mezclan con el catalogo base en todo el sitio. Pega el link de la foto en el campo
+        Imagen.</p>
+
+      <div class="layout-admin">
+        <form id="admin-form" class="tarjeta-formulario">
+          <h2 style="font-size:18px;">Nuevo producto</h2>
+          <p class="campo">
+            <label for="admin-nombre">Nombre</label>
+            <input type="text" id="admin-nombre" placeholder="Ej: Aurora Drop Earrings">
+          </p>
+          <p class="campo">
+            <label for="admin-imagen">Imagen (URL)</label>
+            <input type="text" id="admin-imagen" placeholder="https://... o img/nombre.jpg">
+          </p>
+          <p class="campo">
+            <label for="admin-coleccion">Coleccion</label>
+            <select id="admin-coleccion">
+              <option value="Summer">Summer</option>
+              <option value="Classic">Classic</option>
+              <option value="Bridal">Bridal</option>
+            </select>
+          </p>
+          <p class="campo">
+            <label for="admin-tipo">Tipo de pieza</label>
+            <select id="admin-tipo">
+              <option value="Anillos">Anillos</option>
+              <option value="Collares">Collares</option>
+              <option value="Aretes">Aretes</option>
+              <option value="Pulseras">Pulseras</option>
+            </select>
+          </p>
+          <div class="fila-doble">
+            <p class="campo">
+              <label for="admin-precio">Precio ($)</label>
+              <input type="number" id="admin-precio" min="0" step="0.01" placeholder="0.00">
+            </p>
+            <p class="campo">
+              <label for="admin-precio-oferta">Precio oferta (opcional)</label>
+              <input type="number" id="admin-precio-oferta" min="0" step="0.01" placeholder="0.00">
+            </p>
+          </div>
+          <p class="campo">
+            <label for="admin-descripcion">Descripcion</label>
+            <textarea id="admin-descripcion" placeholder="Descripcion corta de la pieza"></textarea>
+          </p>
+          <p class="check-linea">
+            <input type="checkbox" id="admin-en-stock" checked>
+            <label for="admin-en-stock">Hay stock disponible</label>
+          </p>
+          <p class="check-linea">
+            <input type="checkbox" id="admin-destacado">
+            <label for="admin-destacado">Mostrar en destacados del home</label>
+          </p>
+          <p class="mensaje-detalle" id="admin-msg"></p>
+          <button type="submit" class="boton boton-bloque">Agregar producto</button>
+        </form>
+
+        <section aria-labelledby="titulo-lista-admin">
+          <h2 id="titulo-lista-admin" style="font-size:18px;">Productos agregados desde este panel</h2>
+          <table class="tabla-admin">
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Coleccion</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="admin-products-body"></tbody>
+          </table>
+          <p class="admin-vacio oculto" id="admin-empty-msg">Todavia no agregaste productos nuevos.</p>
+        </section>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <a href="index.html" class="marca">Darling.</a>
+
+    <nav aria-label="Enlaces de tienda">
+      <h3>Shop</h3>
+      <ul>
+        <li><a href="products.html">Todos los productos</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+
+    <nav aria-label="Enlaces de ayuda">
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="cart.html">Carrito</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+
+    <form class="form-newsletter" onsubmit="return false;" aria-label="Suscripcion al boletin">
+      <h3>Subscribe to our newsletter</h3>
+      <input type="email" placeholder="Input your email" aria-label="Correo para el boletin">
+      <button type="submit">Subscribe</button>
+    </form>
+
+    <p class="pie-inferior">
+      <span>&copy; 2026 Darling Jewelry</span>
+      <span>Entrega FInal del Proyecto</span>
+    </p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/product-card.js"></script>
+  <script src="js/testimonial.js"></script>
+  <script src="js/render-admin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joyeria fina - Darling</title>
+  <meta name="description" content="Darling - joyeria fina disenada en pequenos lotes.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <header class="encabezado">
+    <a href="index.html" class="marca">Darling.</a>
+    <nav class="nav-principal" aria-label="Navegacion principal">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="nav-cuenta" aria-label="Cuenta y carrito">
+      <ul>
+        <li><a href="admin.html" aria-label="Panel de administracion">Admin</a></li>
+        <li>
+          <a href="cart.html" aria-label="Ver carrito">
+            Carrito<span class="contador-carrito" id="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-texto">
+        <h1>Sparkle &amp; Shine: Exquisite Elegance Unveiled</h1>
+        <p>Piezas talladas en pequenos lotes, pensadas para acompanarte todos los dias.</p>
+        <a href="products.html" class="boton boton-contorno">Shop now</a>
+      </div>
+      <figure class="hero-imagen">
+        <img src="https://images.unsplash.com/photo-1620656798579-1984d9e87df7?auto=format&fit=crop&w=1200&h=800&q=80" alt="Modelo luciendo un collar Darling">
+      </figure>
+    </section>
+
+    <section aria-label="Beneficios">
+      <ul class="franja-beneficios">
+        <li>
+          <p class="icono-beneficio" aria-hidden="true">&#128666;</p>
+          <h3>Delivery</h3>
+          <p>Envio asegurado a todo el pais en 3 a 5 dias habiles.</p>
+        </li>
+        <li>
+          <p class="icono-beneficio" aria-hidden="true">&#9825;</p>
+          <h3>Customer care</h3>
+          <p>Te acompanamos antes y despues de tu compra.</p>
+        </li>
+        <li>
+          <p class="icono-beneficio" aria-hidden="true">&#128274;</p>
+          <h3>Payment security</h3>
+          <p>Pagos protegidos de principio a fin.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="titulo-destacados">
+      <div class="encabezado-seccion">
+        <h2 id="titulo-destacados">Featured Products</h2>
+        <a href="products.html">Shop now</a>
+      </div>
+      <ul class="grid-productos" id="featured-products"></ul>
+    </section>
+
+    <section aria-labelledby="titulo-colecciones" class="centrado">
+      <h2 id="titulo-colecciones">Our Collections</h2>
+      <ul class="grid-colecciones" id="home-collections"></ul>
+      <p style="margin-top:24px;"><a href="collections.html" class="boton boton-contorno-oscuro">Shop now</a></p>
+    </section>
+
+    <section aria-labelledby="titulo-story">
+      <h2 id="titulo-story">Our story</h2>
+      <figure class="figura-video">
+        <img src="https://images.unsplash.com/photo-1715374033196-0ff662284a7e?auto=format&fit=crop&w=1200&h=600&q=80" alt="Detras de camaras de una sesion de fotos de Darling">
+        <button type="button" class="boton-play" aria-label="Reproducir video">&#9654;</button>
+      </figure>
+    </section>
+
+    <section id="testimonios-home" aria-label="Testimonio de clientes"></section>
+
+  </main>
+
+  <footer class="pie">
+    <a href="index.html" class="marca">Darling.</a>
+
+    <nav aria-label="Enlaces de tienda">
+      <h3>Shop</h3>
+      <ul>
+        <li><a href="products.html">Todos los productos</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+
+    <nav aria-label="Enlaces de ayuda">
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="cart.html">Carrito</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </nav>
+
+    <form class="form-newsletter" onsubmit="return false;" aria-label="Suscripcion al boletin">
+      <h3>Subscribe to our newsletter</h3>
+      <input type="email" placeholder="Input your email" aria-label="Correo para el boletin">
+      <button type="submit">Subscribe</button>
+    </form>
+
+    <p class="pie-inferior">
+      <span>&copy; 2026 Darling Jewelry</span>
+      <span>Entrega FInal del Proyecto</span>
+    </p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/product-card.js"></script>
+  <script src="js/testimonial.js"></script>
+  <script src="js/render-home.js"></script>
+</body>
+
+</html>
